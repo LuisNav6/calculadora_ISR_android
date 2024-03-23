@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ISR</string>
+    <string name="ingreso_hint">Ingresar ingreso</string>
+    <string name="calcular_btn">Calcular ISR</string>
+    <string name="resultado_label">Resultado:</string>
+    <string-array name="periodicidades_array">
+        <item>Diario</item>
+        <item>Semanal</item>
+        <item>Decenal</item>
+        <item>Quincenal</item>
+        <item>Mensual</item>
+    </string-array>
+</resources>

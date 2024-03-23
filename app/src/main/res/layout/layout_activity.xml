@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".newISR"
+    android:id="@+id/layout_activity">
+
+    <ToggleButton
+        android:id="@+id/colorToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/ingreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ingreso"
+        />
+
+    <RadioGroup
+        android:id="@+id/periodoRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/periodoMensualRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensual" />
+
+        <RadioButton
+            android:id="@+id/periodoQuincenalRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quincenal" />
+
+        <RadioButton
+            android:id="@+id/periodoSemanalRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semanal" />
+
+        <RadioButton
+            android:id="@+id/periodoDiarioRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diario" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/calcularISRButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img2"
+        android:onClick="calcularISR"
+        android:layout_gravity="center"
+ />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Otra Vista"
+        android:layout_gravity="center"
+        android:id="@+id/redireccionar"
+        />
+    <ListView
+        android:id="@+id/listViewResultados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+
+</LinearLayout>
+
+

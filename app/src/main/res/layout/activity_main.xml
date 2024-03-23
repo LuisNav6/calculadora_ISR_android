@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/constraintLayout">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/ingresoEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ingreso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Spinner
+        android:id="@+id/periodicidadSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingresoEditText" />
+
+    <Button
+        android:id="@+id/calculoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular ISR"
+        android:onClick="calcularISR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/periodicidadSpinner" />
+
+    <TextView
+        android:id="@+id/resultadoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculoButton"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ingresoCalculadoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/limiteInferiorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingresoCalculadoTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/diferenciaTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/limiteInferiorTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tasaTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diferenciaTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/impuestoMarginalTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasaTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/cuotaFijaTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/impuestoMarginalTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/impuestoRetenerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuotaFijaTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/percepcionMenosImpuestosTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/impuestoRetenerTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/periodicidadtexto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percepcionMenosImpuestosTextView"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/botonRedireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Otra vista?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/periodicidadtexto"
+        android:layout_gravity="center" />
+
+    <ToggleButton
+        android:id="@+id/colorToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
